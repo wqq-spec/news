@@ -26,7 +26,7 @@ $(function() {
       // 如果判断失败,则return一个提示消息即可
       var pwd = $('.reg-box [name=password]').val()
       if (pwd !== value) {
-        return '两次密码不一致！'
+        return '两次密码不一致'
       }
     }
   })
@@ -41,12 +41,13 @@ $(function() {
       password: $('#form_reg [name=password]').val()
     }
     $.post('/api/reguser', data, function(res) {
-      if (res.status !== 0) {
-        return layer.msg(res.message)
-      }
-      layer.msg('注册成功，请登录！')
-      // 模拟人的点击行为
-      $('#link_login').click()
+      // if (res.status !== 0) {
+        console.log(res);
+      //   return layer.msg(res.message)
+      // }
+      // layer.msg('注册成功，请登录！')
+      // // 模拟人的点击行为
+      // $('#link_login').click()
     })
   })
 
