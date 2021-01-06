@@ -9,25 +9,11 @@ $(function () {
             localStorage.removeItem('token')
             // 2.重新跳转到登录页面
             location.href = "/login.html"
-
-
-
-
-
-
-
             layer.close(index);
         });
     })
 
 })
-
-
-
-
-
-
-
 
 
 

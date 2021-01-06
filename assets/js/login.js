@@ -41,13 +41,13 @@ $(function() {
       password: $('#form_reg [name=password]').val()
     }
     $.post('/api/reguser', data, function(res) {
-      // if (res.status !== 0) {
-        console.log(res);
-      //   return layer.msg(res.message)
-      // }
-      // layer.msg('注册成功，请登录！')
+      if (res.status !== 0) {
+        // console.log(res);
+        return layer.msg(res.message)
+      }
+      layer.msg('注册成功，请登录！')
       // // 模拟人的点击行为
-      // $('#link_login').click()
+      $('#link_login').click()
     })
   })
 
